@@ -3,6 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-    enum kind: [:admin, :librarian]
-    has_many :reservations
+  enum kind: [:admin, :librarian]
+  has_many :reservations
 end
