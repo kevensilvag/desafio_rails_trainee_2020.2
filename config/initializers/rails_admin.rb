@@ -2,7 +2,6 @@ RailsAdmin.config do |config|
 
   config.main_app_name = ["Biblioteca", ""]
 
-
   ### Popular gems integration
 
   ## == Devise ==
@@ -25,6 +24,85 @@ RailsAdmin.config do |config|
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar = true
+
+
+  config.model Author do
+    create do
+      field  :name
+    end
+   
+    edit do
+      field  :name
+      field  :books
+    end
+  end
+
+  config.model Client do
+    create do
+      field  :name
+    end
+   
+    edit do
+      field  :name
+      field  :reservations
+    end
+  end
+
+  config.model Category do
+    create do
+      field  :name
+    end
+   
+    edit do
+      field  :name
+      field  :books
+    end
+  end
+
+  config.model User do
+    create do
+      field :name
+      field :kind
+      field :email
+      field :password
+    end
+   
+    edit do
+      field :name
+      field :kind
+      field :email
+      field :password
+    end
+  end
+
+  config.model Reservation do
+    create do
+      field :book
+      field :client
+    end
+   
+    edit do
+      field :book
+      field :client
+    end
+  end
+
+  config.model Book do
+    create do
+      field :name 
+      field :stock
+      field :author
+      field :category
+    end
+   
+    edit do
+      field :name 
+      field :stock
+      field :author
+      field :category
+      field :status
+    end
+  end
 
   config.actions do
     dashboard                     # mandatory
