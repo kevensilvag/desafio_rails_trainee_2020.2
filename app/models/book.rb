@@ -3,4 +3,8 @@ class Book < ApplicationRecord
   belongs_to :author
   belongs_to :category
   has_many :reservations
+
+  before_create do
+    self.status = "active"
+  end
 end

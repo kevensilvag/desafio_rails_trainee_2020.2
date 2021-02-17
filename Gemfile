@@ -22,6 +22,8 @@ gem 'rails_admin'
 gem 'devise'
 # CanCanCan
 gem 'cancancan'
+# Faker
+gem 'faker'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

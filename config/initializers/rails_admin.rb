@@ -79,6 +79,11 @@ RailsAdmin.config do |config|
     create do
       field :book
       field :client
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
     end
    
     edit do
@@ -100,7 +105,6 @@ RailsAdmin.config do |config|
       field :stock
       field :author
       field :category
-      field :status
     end
   end
 
