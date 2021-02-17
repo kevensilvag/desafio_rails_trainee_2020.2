@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create name: "Sr Juvenal", kind: :admin, email: "juvenal1935@hotmail.com", password: 123456 
+User.create name: "Sr L", kind: :librarian, email: "librarian@teste.com", password: 123456 

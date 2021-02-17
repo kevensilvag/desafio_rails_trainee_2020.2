@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
     enum kind: [:admin, :librarian]
-    has_many :reservas
+    has_many :reservations
 end
